@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Template</title>
+  </head>
+  <body>
+    <script>
+      const awal = "Muhammad Asharul";
+      const tengah = "Asharul";
+      const akhir = "Maali";
+      const template = `Name : ${awal} ${tengah} ${akhir}`;
+
+      console.info(template);
+
+      const nilai = 50;
+      const template2 = `Nama ${tengah},lulus ${nilai > 70}`;
+      console.info(template2);
+
+      const multiline = `fhkdfdfdfdf
+      fdfdfdfdf
+      dfdfdfdfdfdf`;
+      document.write(multiline);
+    </script>
+  </body>
+</html>

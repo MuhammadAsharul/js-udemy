@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For In</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        firstName: "Asharul",
+        middleName: "Maali",
+        lastName : "Muhammad"
+      };
+      for (const p in person) {
+            document.write(`<p>${p} : ${person[p]}</p>`);
+
+        }
+        const name =['asjhaks','adasfdf','gdgdgdfg']
+        for (const key in name) {
+        document.write(`<p>${key} : ${name[key]}</p>`)
+        }
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      {
+        const name = ["eko", "khannedy", "kurniawan", "Joko", "Budi"];
+        const [firstName, middleName, lastName, ...others] = name;
+        // document.write(firstName);
+        // document.write(middleName);
+        // document.write(lastName);
+      }
+      {
+        const person = {
+          firstName: "Eko",
+          lastName: "Khannedy",
+          address: {
+            street: "jalan pulang",
+            city: "Jakarta",
+            country: "Indonesia"
+          },
+          hobby: "Game",
+          channel: "Asharul"
+        };
+        let {
+          firstName,
+          lastName,
+          address: { street, city, country }
+        } = person;
+        // document.write(`<br> ${firstName}`);
+        // document.write(`<br> ${lastName}`);
+        // document.write(`<br> ${street}`);
+        // document.write(`<br> ${country}`);
+        // console.info(address);
+      }
+      // destruct parameter
+      {
+        function displayPerson({ firstName, middleName, lastName }) {
+          document.write(firstName);
+          document.write(middleName);
+          document.write(lastName);
+        }
+        const person = {
+          firstName: "Eko ",
+          middleName: "Khannedy ",
+          lastName: "Kurniawan"
+        };
+        displayPerson(person);
+      }
+      {
+        function sum([first, second]) {
+          return first + second;
+        }
+        document.write("<br>");
+        document.write(sum([1, 2]));
+        document.write("<br>");
+        document.write(sum([10, 10]));
+      }
+      {
+        const names = ["Eko", "Khannedy"];
+        const [firstName, middleName, lastName = "Kurniawan"] = names;
+        document.write("<br>");
+        document.write(firstName);
+        document.write("<br>");
+        document.write(middleName);
+        document.write("<br>");
+        document.write(lastName);
+      }
+      {
+        {
+          const person = {
+            firstName: "Eko",
+            middleName: "Budi",
+            lastName: "Khannedy"
+          };
+          let {
+            firstName: namaDepan,
+            middleName: namaTengah = "Kurniawan",
+            lastName: namaBelakang
+          } = person;
+          document.write(`<br> ${namaDepan}`);
+          document.write(`<br> ${namaTengah}`);
+          document.write(`<br> ${namaBelakang}`);
+          // document.write(`<br> ${street}`);
+          // document.write(`<br> ${country}`);
+          // console.info(address);
+        }
+      }
+    </script>
+  </body>
+</html>
